@@ -63,7 +63,8 @@ namespace ConsoleApplication
             woodLength = 2 * (width + height) * 3.25;
             glassArea = 2 * (width * height);
             Console.WriteLine("The length of the wood is " + woodLength + " feet");
-            Console.WriteLine("The area of the glass is " + glassArea + " square metres");            Console.WriteLine("Press any key to exit");
+            Console.WriteLine("The area of the glass is " + glassArea + " square metres");
+            Console.WriteLine("Press any key to exit");
             Console.ReadKey();
 
 
