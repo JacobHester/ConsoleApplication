@@ -18,9 +18,9 @@ namespace ConsoleApplication
             Console.Write("Please enter your location: ");
             location = Console.ReadLine();
 
-            Console.WriteLine($"{ fullName } lives in { location }");
+            Console.WriteLine($"My name is { fullName }, I am from { location }");
 
-            Console.Write("Do you want to know how many days till Christmas? (y/n)");
+            Console.Write("Do you want to know how many days till Christmas? (y/n): ");
             yesOrNo = Console.ReadLine();
 
             if (yesOrNo == "y")
@@ -28,9 +28,9 @@ namespace ConsoleApplication
 
             }
             else if (yesOrNo == "n") {
-
+                Console.WriteLine("Too bad"); //Hah
             } else {
-                Console.Write("You didn't put 'y' or 'n' soooo the program closes");
+                Console.WriteLine("You didn't put 'y' or 'n' soooo 'y' was assumed");
             }
 
             //Days Till Christmas//
@@ -46,10 +46,27 @@ namespace ConsoleApplication
             }
             var christmas = new DateTime(christmasYear, 12, 25);
 
+            var daysTillChristmas = christmas.Date - today.Date;
+
+            Console.WriteLine($"Days till Christmas: { daysTillChristmas }");
+
             //Area//
 
             double width, height, woodLength, glassArea;
             string widthString, heightString;
+            Console.Write("Type in the width of the window: ");
+            widthString = Console.ReadLine();
+            width = double.Parse(widthString);
+            Console.Write("Type in the height of the window: ");
+            heightString = Console.ReadLine();
+            height = double.Parse(heightString);
+            woodLength = 2 * (width + height) * 3.25;
+            glassArea = 2 * (width * height);
+            Console.WriteLine("The length of the wood is " +
+            woodLength + " feet");
+            Console.WriteLine("The area of the glass is " +
+            glassArea + " square metres");            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
 
 
 
